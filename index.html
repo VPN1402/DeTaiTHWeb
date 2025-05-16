@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBAPPESPORT - Giày Bóng Đá</title>
+    <link rel="stylesheet" href="./asset/style.css">
+    <link rel="stylesheet" href="./asset/font/themify-icons/themify-icons.css">
+</head>
+
+<body>
+    <div id="main">
+        <header id="header">
+            <div class="container header-flex">
+                <div class="logo">MBAPPE<span>SPORT</span></div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./index.html">Trang Chủ</a></li>
+                        <li>
+                            <a href="tat-ca-san-pham.html">
+                                Giày Bóng Đá
+                                <i class="nav-arrow-down ti-angle-down"></i>
+
+                            </a>
+                            <ul class="subnav">
+                                <li><a href="tat-ca-san-pham.html">Tất Cả Sản Phẩm</a></li>
+                                <li><a href="giay-co-tu-nhien.html">Giày Cỏ Tự Nhiên</a></li>
+                                <li><a href="giay-co-nhan-tao.html">Giày Cỏ Nhân Tạo</a></li>
+                                <li><a href="giay-futsal.html">Giày Futsal</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="giay-da-banh-nike.html">Thương Hiệu <i
+                                    class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="giay-da-banh-nike.html">Giày Đá Banh Nike</a></li>
+                                <li><a href="giay-da-banh-adidas.html">Giày Đá Banh Adidas</a></li>
+                                <li><a href="giay-da-banh-puma.html">Giày Đá Banh Puma</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="dich-vu.html">Dịch Vụ <i class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="dich-vu.html">BOOT ID GIÀY</a></li>
+                                <li><a href="in-balo-tui-hop-ao.html">IN BALO - TÚI HỘP - ÁO</a></li>
+                                <li><a href="suagiay.html">SỮA CHỮA GIÀY BÓNG ĐÁ CHÍNH HÃNG</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="tin-tuc.html">Tin Tức</a></li>
+                        <li><a href="./Lab-TH.html">Lab-TH</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <input type="text" class="search  " placeholder="Tìm kiếm...">
+                    <div class="search-btn">
+                        <i class="search-icon ti-search"></i>
+
+                    </div>
+                    <i class="icon-cart ti-shopping-cart"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="breadcrumb">
+            <ul>
+                <li>Trang chủ</li>
+                <li>Kèo Ngon Tháng 4</li>
+
+            </ul>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./asset/img/slider1.jpg" style="width: 100%" />
+            </div>
+            <div class="mySlides fade">
+                <img src="/asset/img/slider2.jpg" style=" width: 100%" />
+            </div>
+            <div class="mySlides fade">
+                <img src="/asset/img/slider3.jpg" style="width: 100%" />
+            </div>
+            <div class="mySlides fade">
+                <img src="/asset/img/slider4.jpg" style="width: 100%" />
+            </div>
+            <div class="mySlides fade">
+                <img src="/asset/img/slider5.jpg" style="width: 100%" />
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">
+                < <a class="next" onclick="plusSlides(1)">>
+            </a>
+        </div>
+        <br />
+        <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides((slideIndex += n));
+            }
+
+            function currentSlide(n) {
+                showSlides((slideIndex = n));
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName('mySlides');
+                let dots = document.getElementsByClassName('dot');
+                if (n > slides.length) slideIndex = 1;
+                if (n < 1) slideIndex = slides.length;
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(' active', '');
+                }
+                slides[slideIndex - 1].style.display = 'block';
+                dots[slideIndex - 1].className += ' active';
+            }
+
+            setInterval(() => {
+                plusSlides(1);
+            }, 3000);
+        </script>
+        <div id="content">
+            <section class="hot-deal">
+                <div class="deal-header">
+                    <h2>KÈO NGON THÁNG 4</h2>
+                    <div class="deal-timer">THỜI GIAN CÒN LẠI <span class="timer">4 Ngày 4 Giờ 4 Phút 28
+                            Giây</span>
+                    </div>
+                    <a href="tat-ca-san-pham.html" class="btn-viewall">XEM TẤT CẢ</a>
+                </div>
+                <div class="product-list">
+                    <div class="product">
+                        <span class="label-hot">KÈO NGON</span>
+                        <img src="./asset/img/content1.jpg  " alt="Nike Air Zoom Mercurial">
+                        <h3>NIKE AIR ZOOM MERCURIAL VAPOR 15</h3>
+                        <p class="old-price">2.370.000đ</p>
+                        <p class="price">1.890.000đ <span class="discount">-20%</span></p>
+                    </div>
+                    <div class="product">
+                        <span class="label-hot">KÈO NGON</span>
+                        <img src="./asset/img/content2.jpg" alt="Nike Air Zoom Mercurial">
+                        <h3>NIKE AIR ZOOM MERCURIAL VAPOR 15</h3>
+                        <p class="old-price">2.370.000đ</p>
+                        <p class="price">1.890.000đ <span class="discount">-20%</span></p>
+                    </div>
+                    <div class="product">
+                        <span class="label-hot">KÈO NGON</span>
+                        <img src="./asset/img/content3.jpg" alt="Nike Air Zoom Mercurial">
+                        <h3>NIKE AIR ZOOM MERCURIAL VAPOR 15</h3>
+                        <p class="old-price">2.370.000đ</p>
+                        <p class="price">1.890.000đ <span class="discount">-20%</span></p>
+                    </div>
+                    <div class="product">
+                        <span class="label-hot">KÈO NGON</span>
+                        <img src="./asset/img/content4.jpg" alt="Nike Air Zoom Mercurial">
+                        <h3>NIKE AIR ZOOM MERCURIAL VAPOR 15</h3>
+                        <p class="old-price">2.370.000đ</p>
+                        <p class="price">1.890.000đ <span class="discount">-20%</span></p>
+                    </div>
+
+
+                    <div class="product">
+                        <span class="label-hot">KÈO NGON</span>
+                        <img src="./asset/img/niketempo.jpg" alt="Nike Air Zoom Mercurial">
+                        <h3>Giày bóng đá Nike Tiempo Legend 10 Elite AG-PRO Prism - Copa// White IB9520-401
+                        </h3>
+                        <p class="old-price">7.390.000đ</p>
+                        <p class="price">5.390.000đ <span class="discount">-20%</span></p>
+                    </div>
+                    <div class="product">
+                        <span class="label-hot">KÈO NGON</span>
+                        <img src="./asset/img/nikephantom.jpg" alt="Nike Air Zoom Mercurial">
+                        <h3>Giày đá bóng Nike Phantom Luna II Academy TF Shadow - Black FJ2566-001</h3>
+                        <p class="old-price">2.929.000đ</p>
+                        <p class="price">1.950.000đ <span class="discount">-33%</span></p>
+                    </div>
+                    <div class="product">
+                        <span class="label-hot">KÈO NGON</span>
+                        <img src="./asset/img/nikephantom1.jpg" alt="Nike Air Zoom Mercurial">
+                        <h3>Nike Phantom GX Academy DF TF Peak Ready - Hyper Turquoise/Black/Fuchsia
+                            Dream/White
+                        </h3>
+                        <p class="old-price">2.929.000đ</p>
+                        <p class="price">1.990.000đ <span class="discount">-32%</span></p>
+                    </div>
+                    <div class="product">
+                        <span class="label-hot">KÈO NGON</span>
+                        <img src="./asset/img/phantom2.jpg" alt="Nike Air Zoom Mercurial">
+                        <h3>Nike Phantom GX Academy DF TF Peak Ready - Hyper Turquoise/Black/Fuchsia
+                            Dream/White
+                        </h3>
+                        <p class="old-price">2.929.000đ</p>
+                        <p class="price">2.190.000đ <span class="discount">-25%</span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer id="footer">
+            <div class="container">
+                <p>Liên hệ: 0866 811 434 | Email: shopgiaydabong@email.com</p>
+                <p>&copy; 2024 MBAPPERSPORT</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

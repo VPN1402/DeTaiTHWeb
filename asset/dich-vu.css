@@ -1,0 +1,237 @@
+body {
+    background: #f7f7fa;
+}
+
+.bootid-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('https://file.hstatic.net/1000061481/file/check_list_to_do-21_d05a16c25d134a3898918f9dedccca4c.jpg') center center/cover no-repeat;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.bootid-banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 153, 0, 0.97);
+    color: #fff;
+    font-size: 2, 7rem;
+    font-weight: bold;
+    padding: 32px 40px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+    letter-spacing: 1px;
+    border: 2px solid #fff3cd;
+}
+
+.bootid-section {
+    background: #fff;
+    margin: 36px auto;
+    max-width: 1100px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    padding: 36px 32px 32px 32px;
+    position: relative;
+}
+
+.bootid-title {
+    color: #ffb300;
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bootid-title i {
+    font-size: 2.1rem;
+    color: #ff9800;
+}
+
+.bootid-highlight {
+    color: #fff3cd;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px #ff9800;
+}
+
+.bootid-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 22px 0 10px 0;
+    box-shadow: 0 2px 12px rgba(255, 193, 7, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.bootid-table th,
+.bootid-table td {
+    border: none;
+    padding: 14px 18px;
+    text-align: center;
+}
+
+.bootid-table th {
+    background: #ffe066;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+.bootid-table tr:nth-child(even) td {
+    background: #fffbe7;
+}
+
+.bootid-table tr:nth-child(odd) td {
+    background: #fff;
+}
+
+.bootid-note {
+    color: #e53935;
+    font-weight: bold;
+    font-size: 1.08em;
+    margin-top: 8px;
+}
+
+.bootid-color-list,
+.bootid-logo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 22px 0 10px 0;
+}
+
+.bootid-color-item {
+    min-width: 90px;
+    padding: 12px 14px 10px 14px;
+    border-radius: 8px;
+    border: 2px solid #eee;
+    text-align: center;
+    font-size: 1.08rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.15s, box-shadow 0.15s, border 0.15s;
+    cursor: pointer;
+}
+
+.bootid-color-item:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 6px 18px rgba(255, 193, 7, 0.18);
+    border: 2px solid #ffb300;
+}
+
+.bootid-color-black {
+    background: #111;
+    color: #fff;
+}
+
+.bootid-color-white {
+    background: #fff;
+    color: #111;
+    border: 2px solid #ccc;
+}
+
+.bootid-color-gold {
+    background: linear-gradient(90deg, #ffe066, #ffd700);
+    color: #111;
+}
+
+.bootid-color-silver {
+    background: linear-gradient(90deg, #eee, #bbb);
+    color: #111;
+}
+
+.bootid-color-neonyellow {
+    background: #faff00;
+    color: #111;
+}
+
+.bootid-color-neonpink {
+    background: #ff2fa0;
+    color: #fff;
+}
+
+.bootid-logo-list img {
+    height: 38px;
+    margin: 0 10px 10px 0;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.bootid-logo-list img:hover {
+    transform: scale(1.13) rotate(-3deg);
+    box-shadow: 0 6px 18px rgba(255, 193, 7, 0.18);
+}
+
+ul {
+    margin-left: 18px;
+    margin-bottom: 0;
+}
+
+.bootid-section ul li {
+    margin-bottom: 7px;
+    font-size: 1.08rem;
+}
+
+.bootid-section>div,
+.bootid-section>ul,
+.bootid-section>table {
+    margin-bottom: 10px;
+}
+
+.bootid-section:last-child {
+    margin-bottom: 40px;
+}
+
+.bootid-section .desc {
+    color: #666;
+    font-size: 1.01rem;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+    .bootid-section {
+        padding: 18px 4vw;
+    }
+
+    .bootid-banner-text {
+        font-size: 1.3rem;
+        padding: 12px;
+    }
+
+    .bootid-title {
+        font-size: 1.3rem;
+    }
+
+    .bootid-logo-list img {
+        height: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bootid-section {
+        padding: 8px 2vw;
+    }
+
+    .bootid-banner {
+        min-height: 180px;
+    }
+
+    .bootid-banner-text {
+        font-size: 1rem;
+        padding: 7px;
+    }
+
+    .bootid-title {
+        font-size: 1.1rem;
+    }
+}

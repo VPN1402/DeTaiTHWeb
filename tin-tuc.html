@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIÀY ĐÁ BANH - MBAPPESPORT</title>
+    <link rel="stylesheet" href="./asset/style.css">
+    <link rel="stylesheet" href="./asset/font/themify-icons/themify-icons.css">
+    <style>
+        body {
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .flex-main-content {
+            display: flex;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .sidebar-category {
+            width: 260px;
+            background: #fafafa;
+            border-radius: 8px;
+            box-shadow: none;
+            padding: 0;
+            height: fit-content;
+            border: 1px solid #f0f0f0;
+        }
+
+        .sidebar-category h2 {
+            font-size: 17px;
+            font-weight: 500;
+            text-align: left;
+            margin: 30px 0 10px 0;
+            color: #444;
+            font-weight: bold;
+            padding: 16px 20px 8px 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ededed;
+            background: none;
+            z-index: 1;
+            position: relative;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .sidebar-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: #fafafa;
+        }
+
+        .sidebar-category ul li {
+            border-bottom: 1px solid #ededed;
+        }
+
+        .sidebar-category ul li:last-child {
+            border-bottom: 1px solid #ededed;
+        }
+
+        .sidebar-category ul li a {
+            display: block;
+            padding: 14px 20px;
+            color: #444;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: #fafafa;
+            border-radius: 0;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .sidebar-category ul li a:hover,
+        .sidebar-category ul li a:focus {
+            color: red;
+            background: #f2f2f2;
+        }
+
+        .sidebar-filter {
+            margin-top: 24px;
+            padding: 0 20px 20px 20px;
+            background: #fafafa;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .sidebar-filter h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 24px 0 12px 0;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        .sidebar-filter label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .sidebar-filter input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .main-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .banner-left {
+            width: 100%;
+        }
+
+        .breadcrumb {
+            background: #f5f5f5;
+            padding: 8px 16px;
+            margin-bottom: 18px;
+            border-radius: 4px;
+            box-shadow: none;
+            width: 100%;
+            margin-top: 70px;
+        }
+
+        .breadcrumb ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb ul li {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: #b0b0b0;
+            font-weight: 400;
+        }
+
+        .breadcrumb ul li:not(:last-child)::after {
+            content: "/";
+            margin: 0 8px;
+            color: #b0b0b0;
+        }
+
+        .breadcrumb ul li a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-weight: 400;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .breadcrumb ul li:last-child {
+            color: #b0b0b0;
+        }
+
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .news-header h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .news-search {
+            display: flex;
+            gap: 8px;
+        }
+
+        .news-search input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 250px;
+            font-size: 14px;
+        }
+
+        .news-search button {
+            background: #e53935;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .news-search button:hover {
+            background: #c62828;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .news-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .news-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-info {
+            padding: 16px;
+        }
+
+        .news-info h3 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin: 0 0 8px 0;
+            line-height: 1.4;
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 14px;
+            margin: 0 0 8px 0;
+        }
+
+        .news-excerpt {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0 0 12px 0;
+        }
+
+        .read-more {
+            color: #e53935;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 32px;
+        }
+
+        .pagination button {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pagination button:hover {
+            border-color: #e53935;
+            color: #e53935;
+        }
+
+        .pagination button.active {
+            background: #e53935;
+            color: white;
+            border-color: #e53935;
+        }
+
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-header {
+                flex-direction: column;
+                gap: 16px;
+                align-items: flex-start;
+            }
+
+            .news-search {
+                width: 100%;
+            }
+
+            .news-search input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <header id="header">
+            <div class="container header-flex">
+                <div class="logo">MBAPPE<span>SPORT</span></div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./index.html">Trang Chủ</a></li>
+                        <li>
+                            <a href="tat-ca-san-pham.html">Giày Bóng Đá <i class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="tat-ca-san-pham.html">Tất Cả Sản Phẩm</a></li>
+                                <li><a href="giay-co-tu-nhien.html">Giày Cỏ Tự Nhiên</a></li>
+                                <li><a href="giay-co-nhan-tao.html">Giày Cỏ Nhân Tạo</a></li>
+                                <li><a href="giay-futsal.html">Giày Futsal</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="giay-da-banh-nike.html">Thương Hiệu <i
+                                    class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="giay-da-banh-nike.html">Giày Đá Banh Nike</a></li>
+                                <li><a href="giay-da-banh-adidas.html">Giày Đá Banh Adidas</a></li>
+                                <li><a href="giay-da-banh-puma.html">Giày Đá Banh Puma</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="dich-vu.html">Dịch Vụ <i class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="dich-vu.html">BOOT ID GIÀY</a></li>
+                                <li><a href="in-balo-tui-hop-ao.html">IN BALO - TÚI HỘP - ÁO</a></li>
+                                <li><a href="suagiay.html">SỮA CHỮA GIÀY BÓNG ĐÁ CHÍNH HÃNG</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="tin-tuc.html">Tin Tức</a></li>
+                        <li><a href="Lab-TH.html">Lab-TH</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <input type="text" class="search" placeholder="Tìm kiếm...">
+                    <div class="search-btn">
+                        <i class="search-icon ti-search"></i>
+                    </div>
+                    <i class="icon-cart ti-shopping-cart"></i>
+                </div>
+            </div>
+    </div>
+    </header>
+    <div class="breadcrumb">
+        <ul>
+            <li>Trang chủ</li>
+            <li>Danh mục</li>
+            <li>Tin Tức</li>
+        </ul>
+    </div>
+
+    <div class="container flex-main-content">
+        <aside class="sidebar-category">
+            <h2>DANH MỤC SẢN PHẨM</h2>
+            <ul>
+                <li><a href="tat-ca-san-pham.html">Tất cả sản phẩm</a></li>
+                <li><a href="giay-co-tu-nhien.html">Giày cỏ tự nhiên</a></li>
+                <li><a href="giay-co-nhan-tao.html">Giày cỏ nhân tạo</a></li>
+                <li><a href="giay-futsal.html">Giày futsal</a></li>
+                <li><a href="dich-vu.html">BOOT ID GIÀY</a></li>
+                <li><a href="in-balo-tui-hop-ao.html">IN BALO-TÚI HỘP-ÁO</a></li>
+                <li><a href="suagiay.html">SỮA CHỮA GIÀY ĐÁ BÓNG CHÍNH HÃNG</a></li>
+            </ul>
+            <img class="banner-left" src="./asset/img/banner-left-col.jpg" alt="">
+        </aside>
+        <div class="main-content">
+            <div class="news-header">
+                <h2>TIN TỨC</h2>
+                <div class="news-search">
+                    <input type="text" placeholder="Tìm kiếm bài viết">
+                    <button><i class="ti-search"></i></button>
+                </div>
+            </div>
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="./asset/img/tintuc1.jpg" alt="news1">
+                    <div class="news-info">
+                        <h3>CEO Adidas F50: 4.4 triệu đôi Romatics, Chiến Thức Lên Kế Hoạch 2025</h3>
+                        <p class="news-date">12/05/2025</p>
+                        <p class="news-excerpt">Adidas đã công bố kế hoạch phát triển mới cho dòng giày F50, với mục
+                            tiêu đạt 4.4 triệu đôi bán ra trong năm 2025...</p>
+                        <a href="#" class="read-more">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./asset/img/tintuc2.jpg" alt="news2">
+                    <div class="news-info">
+                        <h3>Bayern Munich ra mắt áo đấu sân nhà 2025/26</h3>
+                        <p class="news-date">10/05/2025</p>
+                        <p class="news-excerpt">CLB Bayern Munich chính thức ra mắt áo đấu sân nhà mới cho mùa giải
+                            2025/26 với thiết kế độc đáo...</p>
+                        <a href="#" class="read-more">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./asset/img/tintuc3.jpg" alt="news3">
+                    <div class="news-info">
+                        <h3>Nike Mercurial Vapor 16 Y3: Kết Tủa Đầy Bùng Nổ</h3>
+                        <p class="news-date">08/05/2025</p>
+                        <p class="news-excerpt">Nike chính thức ra mắt phiên bản Mercurial Vapor 16 Y3 với công nghệ đột
+                            phá và thiết kế mới...</p>
+                        <a href="#" class="read-more">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./asset/img/tintuc4.jpg" alt="news4">
+                    <div class="news-info">
+                        <h3>Hyundai Thoát Lỗi Nike Hypervenom Remake</h3>
+                        <p class="news-date">06/05/2025</p>
+                        <p class="news-excerpt">Nike đã khắc phục thành công lỗi trên dòng giày Hypervenom Remake sau
+                            khi nhận được phản hồi từ người dùng...</p>
+                        <a href="#" class="read-more">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./asset/img/tintuc5.jpg" alt="news5">
+                    <div class="news-info">
+                        <h3>Adidas Predator 2025: Sản phẩm cực chất</h3>
+                        <p class="news-date">29/04/2025</p>
+                        <p class="news-excerpt">Adidas Predator 2025 được đánh giá là một trong những sản phẩm tốt nhất
+                            của hãng với nhiều cải tiến...</p>
+                        <a href="#" class="read-more">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="./asset/img/tintuc6.jpg" alt="news6">
+                    <div class="news-info">
+                        <h3>Puma Future Ultimate: Đột Phá Công Nghệ Mới</h3>
+                        <p class="news-date">25/04/2025</p>
+                        <p class="news-excerpt">Puma ra mắt dòng giày Future Ultimate với công nghệ FUZIONFIT360 độc
+                            quyền...</p>
+                        <a href="#" class="read-more">Đọc tiếp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>...</button>
+                <button>49</button>
+                <button><i class="ti-angle-right"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

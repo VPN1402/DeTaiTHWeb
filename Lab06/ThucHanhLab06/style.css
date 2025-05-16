@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#menu{
+    background-color: #333;
+    overflow: hidden;
+}
+
+#menu a{
+    display:inline-block;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: #fff;
+    font-size: 17px;
+    
+   
+}
+#menu > a:hover{
+    background-color: #ccc;
+    color: #000;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 600px){
+    #menu a{display: block;}
+}
+

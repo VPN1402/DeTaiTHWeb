@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Thực Hành</title>
+    <link rel="stylesheet" href="./asset/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./asset/style.css">
+    <style>
+        .main-content {
+            padding: 40px 0 30px 0;
+        }
+
+        .lab-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+
+        .lab-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            width: 270px;
+            min-height: 170px;
+            padding: 18px 14px 18px 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            margin-top: 32px;
+        }
+
+        .lab-card h2 {
+            font-size: 1.25rem;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .lab-card a {
+            list-style-type: none;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .lab-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 18px 0;
+        }
+
+        .lab-card ul li {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .lab-card .btn-detail {
+            background: #1abc5b;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 0;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .lab-card .btn-detail:hover {
+            background: #159c48;
+        }
+
+        @media (max-width: 900px) {
+            .lab-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .lab-card {
+                width: 95vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <header id="header">
+            <div class="container header-flex">
+                <div class="logo">MBAPPE<span>SPORT</span></div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./index.html">Trang Chủ</a></li>
+                        <li>
+                            <a href="tat-ca-san-pham.html">
+                                Giày Bóng Đá
+                                <i class="nav-arrow-down ti-angle-down"></i>
+
+                            </a>
+                            <ul class="subnav">
+                                <li><a href="tat-ca-san-pham.html">Tất Cả Sản Phẩm</a></li>
+                                <li><a href="giay-co-tu-nhien.html">Giày Cỏ Tự Nhiên</a></li>
+                                <li><a href="giay-co-nhan-tao.html">Giày Cỏ Nhân Tạo</a></li>
+                                <li><a href="giay-futsal.html">Giày Futsal</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="giay-da-banh-nike.html">Thương Hiệu <i
+                                    class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="giay-da-banh-nike.html">Giày Đá Banh Nike</a></li>
+                                <li><a href="giay-da-banh-adidas.html">Giày Đá Banh Adidas</a></li>
+                                <li><a href="giay-da-banh-puma.html">Giày Đá Banh Puma</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="dich-vu.html">Dịch Vụ <i class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="dich-vu.html">BOOT ID GIÀY</a></li>
+                                <li><a href="in-balo-tui-hop-ao.html">IN BALO - TÚI HỘP - ÁO</a></li>
+                                <li><a href="suagiay.html">SỮA CHỮA GIÀY BÓNG ĐÁ CHÍNH HÃNG</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="tin-tuc.html">Tin Tức</a></li>
+                        <li><a href="./Lab-TH.html">Lab-TH</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <input type="text" class="search" placeholder="Tìm kiếm...">
+                    <div class="search-btn">
+                        <i class="search-icon ti-search"></i>
+                    </div>
+                    <i class="icon-cart ti-shopping-cart"></i>
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="lab-list">
+                <div class="lab-card">
+                    <h2>Lab01: HTML</h2>
+                    <ul>
+                        <li><a href="./Lab01/index.html ">Lab1_3</a></li>
+                        <li><a href="./Lab01/lab012.html">Lab1_4</a></li>
+                    </ul>
+                    <button class="btn-detail">Xem chi tiết</button>
+                </div>
+                <div class="lab-card">
+                    <h2>Lab02: Table & List</h2>
+                    <ul>
+                        <li><a href="./Lab02/lab02_bai1.html">Lab2_1</a></li>
+                        <li><a href="./Lab02/lab02_Bai2.html">Lab2_2</a></li>
+                        <li><a href="./Lab02/lab02_bai3.html">Lab2_3</a></li>
+                    </ul>
+                    <button class="btn-detail">Xem chi tiết</button>
+                </div>
+                <div class="lab-card">
+                    <h2>Lab03: Frame & Form</h2>
+                    <ul>
+                        <li><a href="./Lab03/Vi_du_Lab01/lab03_bai1.html">Lab3_1</a></li>
+                        <li><a href="./Lab03/Vi_du_Lab01/lab03_bai2.html">Lab3_2</a></li>
+                        <li><a href="./Lab03/Vi_du_Lab01/lab03_bai3.html">Lab3_3</a></li>
+                    </ul>
+                    <button class="btn-detail">Xem chi tiết</button>
+                </div>
+                <div class="lab-card">
+                    <h2>Lab04: CSS cơ bản</h2>
+                    <ul>
+                        <li><a href="./Lab04/Vi_du/lab04_bai1.html">Lab4_1</a></li>
+                        <li><a href="./Lab04/Vi_du/lab04_bai2.html">Lab4_2</a></li>
+                        <li><a href="./Lab04/Vi_du/lab04_bai3.html">Lab4_3</a></li>
+                    </ul>
+                    <button class="btn-detail">Xem chi tiết</button>
+                </div>
+                <div class="lab-card">
+                    <h2>Lab05: Các thuộc tính CSS</h2>
+                    <ul>
+                        <li><a href="./Lab05/Vi_du/lab05_1.html">Lab5_1</a></li>
+                        <li><a href="./Lab05/Bai_2/lab05_2.html">Lab5_2</a></li>
+                        <li><a href="./Lab05/Bai_2/lab05_3.html">Lab5_3</a></li>
+                    </ul>
+                    <button class="btn-detail">Xem chi tiết</button>
+                </div>
+                <div class="lab-card">
+                    <h2>Lab06: Xây dựng layout responsive bằng CSS</h2>
+                    <ul>
+                        <li><a href="./Lab06/ThucHanhLab06/lab06_ 1.html">Lab6_1</a></li>
+                        <li><a href="./Lab06/Bai_2_Minh_hoa_layout/lab06_2.html">Lab6_2</a></li>
+                        <li><a href="./Lab06/Bai_2_Minh_hoa_layout/lab06_3.html">Lab6_3</a></li>
+                    </ul>
+                    <button class="btn-detail">Xem chi tiết</button>
+                </div>
+                <div class="lab-card">
+                    <h2>Lab07: Javascript</h2>
+                    <ul>
+                        <li><a href="./Lab07/Vi_du/lab07_bai1.html">Lab7_1</a></li>
+                        <li><a href="./Lab07/demo_bai_2/lab07_2.html">Lab7_2</a></li>
+                    </ul>
+                    <button class="btn-detail">Xem chi tiết</button>
+                </div>
+                <div class="lab-card">
+                    <h2>Lab08: Javascript nâng cao</h2>
+                    <ul>
+                        <li><a href="Lab08/lab08_bai1/index.html">Lab8_1</a></li>
+                        <li><a href="./Lab08/lab08_bai2/index.html">Lab8_2</a></li>
+                        <li><a href="./Lab08/lab08_bai3/index.html">Lab8_3</a></li>
+                    </ul>
+                    <button class="btn-detail">Xem chi tiết</button>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container">
+                <p>Liên hệ: 0866 811 434 | Email: shopgiaydabong@email.com</p>
+                <p>&copy; 2024 MBAPPERSPORT</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

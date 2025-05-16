@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIÀY ĐÁ BANH - MBAPPESPORT</title>
+    <link rel="stylesheet" href="./asset/style.css">
+    <link rel="stylesheet" href="./asset/font/themify-icons/themify-icons.css">
+    <style>
+        body {
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .flex-main-content {
+            display: flex;
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .sidebar-category {
+            width: 260px;
+            background: #fafafa;
+            border-radius: 8px;
+            box-shadow: none;
+            padding: 0;
+            height: fit-content;
+            border: 1px solid #f0f0f0;
+        }
+
+        .sidebar-category h2 {
+            font-size: 17px;
+            font-weight: 500;
+            text-align: left;
+            margin: 30px 0 10px 0;
+            color: #444;
+            font-weight: bold;
+            padding: 16px 20px 8px 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ededed;
+            background: none;
+            z-index: 1;
+            position: relative;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .sidebar-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: #fafafa;
+        }
+
+        .sidebar-category ul li {
+            border-bottom: 1px solid #ededed;
+        }
+
+        .sidebar-category ul li:last-child {
+            border-bottom: 1px solid #ededed;
+        }
+
+        .sidebar-category ul li a {
+            display: block;
+            padding: 14px 20px;
+            color: #444;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: #fafafa;
+            border-radius: 0;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .sidebar-category ul li a:hover,
+        .sidebar-category ul li a:focus {
+            color: red;
+            background: #f2f2f2;
+        }
+
+        .sidebar-filter {
+            margin-top: 24px;
+            padding: 0 20px 20px 20px;
+            background: #fafafa;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .sidebar-filter h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 24px 0 12px 0;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        .sidebar-filter label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .sidebar-filter input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .main-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .banner {
+            width: 100%;
+            height: 220px;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .desc-box {
+            background: #fff;
+            border-radius: 6px;
+            padding: 24px 32px 16px 32px;
+            margin-bottom: 18px;
+        }
+
+        .desc-box h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .desc-box p {
+            color: #222;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .sort-bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .sort-bar label {
+            margin-right: 8px;
+            font-size: 15px;
+            color: #444;
+        }
+
+        .sort-bar select {
+            padding: 5px 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px 12px;
+        }
+
+        .product {
+            width: 23%;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 12px 8px 16px 8px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product .discount-badge {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #e53935;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 180px;
+            margin-bottom: 8px;
+        }
+
+        .product h3 {
+            font-size: 1em;
+            font-weight: 600;
+            margin: 8px 0 4px 0;
+            text-align: center;
+            min-height: 40px;
+        }
+
+        .product .old-price {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 0.95em;
+        }
+
+        .product .price {
+            color: #e53935;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1024px) {
+            .product {
+                width: 48%;
+            }
+
+            .product-list {
+                gap: 16px 0;
+            }
+
+            .sidebar-category {
+                width: 100%;
+                margin-bottom: 24px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .product {
+                width: 98%;
+            }
+
+            .flex-main-content {
+                flex-direction: column;
+            }
+        }
+
+        .banner-left {
+            width: 100%;
+        }
+
+        .breadcrumb {
+            background: #f5f5f5;
+            padding: 8px 16px;
+            margin-bottom: 18px;
+            border-radius: 4px;
+            box-shadow: none;
+            width: 100%;
+            margin-top: 70px;
+        }
+
+        .breadcrumb ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb ul li {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: #b0b0b0;
+            font-weight: 400;
+        }
+
+        .breadcrumb ul li:not(:last-child)::after {
+            content: "/";
+            margin: 0 8px;
+            color: #b0b0b0;
+        }
+
+        .breadcrumb ul li a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-weight: 400;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        .breadcrumb ul li:last-child {
+            color: #b0b0b0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <header id="header">
+            <div class="container header-flex">
+                <div class="logo">MBAPPE<span>SPORT</span></div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./index.html">Trang Chủ</a></li>
+                        <li>
+                            <a href="tat-ca-san-pham.html">Giày Bóng Đá <i class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="tat-ca-san-pham.html">Tất Cả Sản Phẩm</a></li>
+                                <li><a href="giay-co-tu-nhien.html">Giày Cỏ Tự Nhiên</a></li>
+                                <li><a href="giay-co-nhan-tao.html">Giày Cỏ Nhân Tạo</a></li>
+                                <li><a href="giay-futsal.html">Giày Futsal</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="giay-da-banh-nike.html">Thương Hiệu <i
+                                    class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="giay-da-banh-nike.html">Giày Đá Banh Nike</a></li>
+                                <li><a href="giay-da-banh-adidas.html">Giày Đá Banh Adidas</a></li>
+                                <li><a href="giay-da-banh-puma.html">Giày Đá Banh Puma</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="dich-vu.html">Dịch Vụ <i class="nav-arrow-down ti-angle-down"></i></a>
+                            <ul class="subnav">
+                                <li><a href="dich-vu.html">BOOT ID GIÀY</a></li>
+                                <li><a href="in-balo-tui-hop-ao.html">IN BALO - TÚI HỘP - ÁO</a></li>
+                                <li><a href="suagiay.html">SỮA CHỮA GIÀY BÓNG ĐÁ CHÍNH HÃNG</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="tin-tuc.html">Tin Tức</a></li>
+                        <li><a href="Lab-TH.html">Lab-TH</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <input type="text" class="search" placeholder="Tìm kiếm...">
+                    <div class="search-btn">
+                        <i class="search-icon ti-search"></i>
+                    </div>
+                    <i class="icon-cart ti-shopping-cart"></i>
+                </div>
+            </div>
+    </div>
+    </header>
+    <div class="breadcrumb">
+        <ul>
+            <li>Trang chủ</li>
+            <li>Danh mục</li>
+            <li>Giày đá banh Puma - Bảo hành 180 ngày</li>
+        </ul>
+    </div>
+    <div class="container flex-main-content">
+        <aside class="sidebar-category">
+            <h2>DANH MỤC SẢN PHẨM</h2>
+            <ul>
+                <li><a href="tat-ca-san-pham.html">Tất cả sản phẩm</a></li>
+                <li><a href="giay-co-tu-nhien.html">Giày cỏ tự nhiên</a></li>
+                <li><a href="giay-co-nhan-tao.html">Giày cỏ nhân tạo</a></li>
+                <li><a href="giay-futsal.html">Giày futsal</a></li>
+                <li><a href="dich-vu.html">BOOT ID GIÀY</a></li>
+                <li><a href="in-balo-tui-hop-ao.html">IN BALO-TÚI HỘP-ÁO</a></li>
+                <li><a href="suagiay.html">SỮA CHỮA GIÀY ĐÁ BÓNG CHÍNH HÃNG</a></li>
+            </ul>
+
+            <div class="sidebar-filter">
+                <h3>Tìm theo</h3>
+                <div style="margin-bottom:12px;">
+                    <b style="font-size:14px;">Dòng sản phẩm</b>
+                    <label><input type="checkbox"> Puma Future</label>
+                    <label><input type="checkbox"> Puma King</label>
+                    <label><input type="checkbox"> Puma Ultra</label>
+
+                </div>
+                <div style="margin-bottom:12px;">
+                    <b style="font-size:14px;">Giá</b>
+                    <label><input type="checkbox"> 1.000.000 - 1.800.000 VNĐ</label>
+                    <label><input type="checkbox"> 2.000.000 - 3.000.000 VNĐ</label>
+                    <label><input type="checkbox"> 3.000.000 - 4.000.000 VNĐ</label>
+                    <label><input type="checkbox"> 4.000.000 - 5.000.000 VNĐ</label>
+                    <label><input type="checkbox"> Trên 5.000.000VNĐ</label>
+                </div>
+                <div>
+                    <b style="font-size:14px;">Size</b>
+                    <label><input type="checkbox"> 38</label>
+                    <label><input type="checkbox"> 39</label>
+                    <label><input type="checkbox"> 40</label>
+                    <label><input type="checkbox"> 41</label>
+                    <label><input type="checkbox"> 42</label>
+                    <label><input type="checkbox"> 43</label>
+                    <label><input type="checkbox"> 44</label>
+                    <label><input type="checkbox"> 45</label>
+                    <label><input type="checkbox"> 46</label>
+                </div>
+                <img class="banner-left" src="./asset/img/banner-left-col.jpg" alt="">
+            </div>
+        </aside>
+        <div class="main-content">
+            <div class="banner">
+                <img src="./asset/img/banner-Puma.jpg" alt="Banner Giày Đá Banh" />
+            </div>
+            <div class="desc-box">
+                <h2>GIÀY ĐÁ BANH PUMA</h2>
+                <p>Thương hiệu cung cấp giày bóng đá chính hãng và các phụ kiện bóng đá lớn sau NIKE, được hình thành
+                    vào năm 1948 tại Đức. Các đại diện nổi tiếng của Neymar, Griezmann… PUMA và ADIDAS là 2 thương hiệu
+                    của 2 anh em ruột Adolf và Rudolf Dassler. </p>
+                <p><b>PUMA FUTURE</b>:là 1 dòng giày đá bóng ra mắt vào năm 2018 thay thế cho PUMA POWER. Đến năm 2020
+                    khi Neymar ký hợp đồng đại diện với PUMA thì hãng này đã quyết định nâng cấp PUMA FUTURE Netfit
+                    thành PUMA FUTURE Z. Cầu thủ nổi tiếng đại diện: Neymar Jr, James Maddison, Luis Suarez…<br>
+                    <b>PUMA ULTRA</b>: là 1 dòng sản phẩm giày đá bóng mới được PUMA ra mắt tháng 8/2020. Đây là dòng
+                    giày chuyên dụng dành cho phong cách chơi "tốc độ" với tinh thần “Speed is Back”. PUMA ULTRA nổi bật
+                    với những cải tiến đột phá, dòng sản phẩm này ra mắt mang sứ mệnh thay thế phiên bản Evo Speed trước
+                    đó. Đây là dòng sản phẩm đối trọng của MERCURIAL và X SPEEDFLOW.<br>
+                    <b>PUMA KING</b>:Puma King là đôi giày có di sản có thể sánh ngang với bất kỳ đôi giày nào khác:
+                    Pele dẫn dắt Brazil đến vinh quang tại World Cup, Diego Maradona vượt qua hàng phòng ngự của đội
+                    tuyển Anh bằng đôi chân của mình rồi đánh bại họ bằng Bàn tay của Chúa, Johan Cryuff thực hiện cú
+                    xoay người Cryuff đầu tiên được truyền hình trực tiếp.<br>
+
+                </p>
+                <p>Tất cả sản phẩm <b>Giày đá banh</b> đều được hỗ trợ trả góp <b style="color:#fbc02d;">0% lãi
+                        suất</b> thông qua <span style="color:#1976d2;text-decoration:underline;">Fundin</span>.</p>
+                <p>Bóng đá là môn thể thao đối kháng, những va chạm, những trầy xước, hư hao là không thể tránh
+                    khỏi. Tất cả sản phẩm <b>Giày đá banh</b> mua tại hệ thống NEYMARSPORT.COM đều được hỗ trợ bảo
+                    hành xuyên suốt thời gian sử dụng. <span
+                        style="background:#ffe082;color:#e65100;font-weight:bold;padding:0 4px;">Chính sách bảo hành
+                        miễn phí 6 tháng.</span></p>
+            </div>
+            <div class="sort-bar">
+                <label for="sort">Sắp xếp theo:</label>
+                <select id="sort">
+                    <option>Mới nhất</option>
+                    <option>Bán chạy</option>
+                    <option>Giá tăng dần</option>
+                    <option>Giá giảm dần</option>
+                </select>
+            </div>
+            <div class="product-list">
+                <div class="product">
+                    <span class="label-hot">-30%</span>
+                    <img src="./asset/img/puma1.jpg" alt="Nike Air Zoom Mercurial">
+                    <h3>GIÀY ĐÁ BÓNG PUMA AIR ZOOM MERCURIAL VAPOR 15 ACADEMY TF</h3>
+                    <p class="old-price">2.850.000đ</p>
+                    <p class="price">1.990.000đ <span class="discount">-30%</span></p>
+                </div>
+                <div class="product">
+                    <span class="label-hot">-5%</span>
+                    <img src="./asset/img/puma2.jpg" alt="Puma Future">
+                    <h3>GIÀY ĐÁ BÓNG PUMA FUTURE Z MATCH TT PRO PM</h3>
+                    <p class="old-price">2.199.000đ</p>
+                    <p class="price">2.099.000đ <span class="discount">-5%</span></p>
+                </div>
+                <div class="product">
+                    <span class="label-hot">Phiên Bản Giới Hạn</span>
+                    <img src="./asset/img/puma3.jpg" alt="Puma Future">
+                    <h3>Giày đá bóng PUMA Future 8 Match TT FOREVER Limited Edition - White/Blue/Orange</h3>
+                    <p class="price">2.099.000đ</p>
+                </div>
+                <div class="product">
+                    <span class="label-hot">Hàng Mới Về</span>
+                    <img src="./asset/img/puma4.jpg" alt="Puma Future">
+                    <h3>Giày đá banh PUMA Ultra 5 Pro Cage TT Formula - Lapis Lazuli/PUMA White/Sunset Glow 107889-01
+                    </h3>
+                    <p class="price">3.999.000đ</p>
+                </div>
+                <div class="product">
+                    <span class="label-hot">Hàng Mới Về</span>
+                    <img src="./asset/img/puma5.jpg" alt="Puma Future">
+                    <h3>Giày đá banh PUMA Ultra 5 Pro Cage TT Formula - Lapis Lazuli/PUMA White/Sunset Glow 107889-01
+                    </h3>
+                    <p class="price">2.490.00đ</p>
+                </div>
+                <div class="product">
+                    <span class="label-hot">Hàng Mới Về</span>
+                    <img src="./asset/img/puma6.jpg" alt="Puma Future">
+                    <h3>Giày đá banh PUMA Future 7 Match TT Formula - Bluemazing/PUMA White/Electric Peppermint
+                        107937-01
+                    </h3>
+                    <p class="price">2.490.00đ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <p>Liên hệ: 0866 811 434 | Email: shopgiaydabong@email.com</p>
+            <p>&copy; 2024 MBAPPERSPORT</p>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
